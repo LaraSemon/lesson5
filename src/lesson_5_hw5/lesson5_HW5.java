@@ -3,12 +3,12 @@ package lesson_5_hw5;
 
 
 class Person {
-     String name;
-     String position;
-     String eMail;
-     String telNummer;
+    String name;
+    String position;
+    String eMail;
+    String telNummer;
     int praise;
-     int age;
+    int age;
 
 
     public Person(String name, String position, String eMail, String telNummer, int praise, int age) {
@@ -26,19 +26,22 @@ class Person {
 //    }
 
 
-
     public String getName() {
         return name;
     }
+
     public String getPosition() {
         return position;
     }
+
     public String geteMail() {
         return eMail;
     }
+
     public String getTelNummer() {
         return telNummer;
     }
+
     public int getPraise() {
         return praise;
     }
@@ -56,16 +59,20 @@ class Person {
     }
 
     public void setAge(int age) {
-
         if (age > 40) {
+            this.age = age;
             System.out.println("возраст больше 40 лет");
-            return;
+        } else {
+            System.out.println("Введен некорректный возраст");
         }
-        this.age = age;
     }
-    public String string(){
+
+    public int getAge() {
+        return age;
+    }
+
+    public String string() {
         return "Person{" + "Имя фамилия работника: " + name + "; Должность: " + position + ";\n " +
                 " Электронный адрес: " + eMail + "; зарплата: " + praise + "; Возраст: " + age + '}';
     }
-
 }
